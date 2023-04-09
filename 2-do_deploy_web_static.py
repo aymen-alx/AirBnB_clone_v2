@@ -9,6 +9,7 @@ from datetime import datetime
 
 env.hosts = ['54.209.86.160', ' 3.84.161.254']
 
+
 def do_deploy(archive_path):
     """
     Deploy archive!
