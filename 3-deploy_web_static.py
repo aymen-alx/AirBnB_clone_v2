@@ -10,24 +10,6 @@ from os import path
 env.hosts = ['54.209.86.160', ' 3.84.161.254']
 
 
-def do_pack():
-    """
-        Compress before sending
-    """
-    date = datetime.now().strftime("%Y%m%d%H%M%S")
-    try:
-        if path.exists("./versions") is False:
-            local('mkdir versions')
-            # print('yes')
-
-        archive_name = "versions/web_static_{}.tgz".format(date)
-        print(archive_name)
-        local("tar -czvf {} web_static".format(archive_name))
-        return archive_name
-    except Exception:
-        return None
-
-
 def do_deploy(archive_path):
     """
     Deploy archive!
@@ -50,6 +32,24 @@ def do_deploy(archive_path):
         return True
     except Exception:
         return False
+
+
+def do_pack():
+    """
+        Compress before sending
+    """
+    date = datetime.now().strftime("%Y%m%d%H%M%S")
+    try:
+        if path.exists("./versions") is False:
+            local('mkdir versions')
+            # print('yes')
+
+        archive_name = "versions/web_static_{}.tgz".format(date)
+        print(archive_name)
+        local("tar -czvf {} web_static".format(archive_name))
+        return archive_name
+    except Exception:
+        return None
 
 
 def deploy():
