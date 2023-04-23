@@ -26,12 +26,11 @@ def c(text):
     return 'C %s' % escape(text.replace("_", " "))
 
 
-@app.route('/python')
-@app.route('/python/(<text>)')
+@app.route('/python/')
+@app.route('/python/<text>')
 def python(text='is cool'):
     """ """
     return 'Python %s' % escape(text.replace("_", " "))
-
 
 
 if __name__ == '__main__':
