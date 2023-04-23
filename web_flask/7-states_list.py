@@ -5,7 +5,7 @@ Hello Flask!, HBNB, C is fun!,...
 
 from flask import Flask, escape, render_template
 from models import storage
-from models import State
+from models.state import State
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
