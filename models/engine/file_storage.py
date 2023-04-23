@@ -61,14 +61,6 @@ class FileStorage:
         """
             delete obj from __objects
         """
-        # print("============file storage================")
-        # print(self.__objects)
-        # print("========argu====================")
-        # print(obj)
-        # # class_name = obj.__class__.split(".")[-1]
-        # print(type(obj))
-        # print(obj.__class__.__name__)
-        # print("============================")
         if obj is None:
             return
         else:
@@ -78,3 +70,9 @@ class FileStorage:
             # print(obj_class + "." + obj_id)
 
             del self.__objects[obj_class + "." + obj_id]
+
+    def close(self):
+        """
+            relode all objects
+        """
+        self.reload()
