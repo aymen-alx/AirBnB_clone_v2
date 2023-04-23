@@ -72,7 +72,5 @@ class FileStorage:
             del self.__objects[obj_class + "." + obj_id]
 
     def close(self):
-        """
-            relode all objects
-        """
+        """ relode all objects"""
         self.reload()
