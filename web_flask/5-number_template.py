@@ -40,7 +40,7 @@ def number(n):
 
 
 @app.route('/number_template/<int:n>')
-def number(n):
+def numberr(n):
     """ """
     return render_template('5-number.html', number=n)
 
