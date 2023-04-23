@@ -22,5 +22,10 @@ def hbnb():
     return 'HBNB'
 
 
+@app.route('/c/<text>')
+def c(text):
+    return 'C is %s' % text.replace("_", " ")
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
