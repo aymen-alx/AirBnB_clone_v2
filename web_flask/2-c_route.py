@@ -3,7 +3,7 @@
 Hello Flask!, HBNB, C is fun!
 """
 
-from flask import Flask
+from flask import Flask, escape
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
