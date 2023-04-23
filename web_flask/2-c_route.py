@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Hello Flask!, HBNB
+Hello Flask!, HBNB, C is fun!
 """
 
 from flask import Flask
@@ -24,6 +24,8 @@ def hbnb():
 
 @app.route('/c/<text>')
 def c(text):
+    """
+    """
     return 'C is %s' % text.replace("_", " ")
 
 
